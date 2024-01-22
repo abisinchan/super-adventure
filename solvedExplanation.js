@@ -71,6 +71,35 @@ Create a named function and leave the code block blank for now. This function wi
 function assignKeyEvents(note) {
     note.addEventListener('mousedown', keyPlay); 
     note.addEventListener('mouseup', keyReturn);
+
+    /*
+    Here's what the assignKeyEvents function does, in simple terms:
+
+    Function Name - assignKeyEvents:
+    Think of this as the note you're writing to each friend (each piano key).
+    
+    Parameter - note:
+    This represents a single friend (a single piano key). When you use this function, you're talking to one friend at a time.
+
+    note.addEventListener('mousedown', keyPlay);:
+    This is like telling your friend, "When someone taps you on the shoulder, turn blue."
+
+    addEventListener is a way to tell your friend to listen for a specific action (like a shoulder tap, which is mousedown in computer terms).
+
+    'mousedown' is the action of pressing the mouse button down over an element. It's like the shoulder tap.
+
+    keyPlay is what you want your friend to do when they get tapped on the shoulder. In our earlier code, we said keyPlay changes the color to blue.
+
+    note.addEventListener('mouseup', keyReturn);:
+    This is like telling your friend, "When they stop tapping your shoulder, go back to your normal color."
+
+    Again, addEventListener is used to tell your friend to listen for another action - this time when the shoulder tap stops (mouseup).
+
+    keyReturn is the instruction for what to do when the tapping stops. In our earlier code, keyReturn changes the color back to normal.
+
+    So, assignKeyEvents is basically a set of instructions you're giving to each of your friends (each piano key) on how to react to being tapped on the shoulder and when the tapping stops.
+    */
+
 }
 
 /*
@@ -82,6 +111,24 @@ function assignKeyEvents(note) {
 
 // Write a loop that runs the array elements through the function
 notes.forEach(assignKeyEvents);
+
+    /*
+    notes.forEach(...):
+    Think of notes as your list of friends.
+
+    forEach is like going through each name on your list one by one. It's a way to make sure every friend gets your message.
+
+    assignKeyEvents:
+    This is the note you wrote earlier with the instructions on what to do when they are tapped on the shoulder (mousedown) and when the tapping stops (mouseup).
+
+    When you write notes.forEach(assignKeyEvents);, you're essentially saying, "For each of my friends in this list, I want to give them the instructions I wrote in assignKeyEvents."
+    */
+
+/*
+7.
+Now, the program knows what to do when each piano key has a mousedown or mouseup event fired on it. Run your code and see how it works! 
+*/
+
 
 // These variables store the buttons that progress the user through the lyrics
 let nextOne = document.getElementById('first-next-line');
@@ -97,29 +144,144 @@ nextTwo.hidden = true;
 nextThree.hidden = true;
 startOver.hidden= true;
 
-// Write anonymous event handler property and function for the first progress button
+/*
+8.
+  Next, there are variables that represent the progress buttons in the song box that allow students to progress the piano.
 
+  The nextOne, nextTwo, nextThree, and startOver change the lyrics and musical notes of the song to help the student play along. In the beginning of the song the only button the student needs is nextOne. Because of this the .hidden properties of the other buttons are assigned the value of true.
+
+  Now you must create events on all the progress buttons. 
+  
+  First, create an event handler property with a click event on the nextOne element.
+
+9.
+  To begin modifying the song box, you must switch the progress buttons first.
+
+  Using an anonymous event handler function, make the following changes to the button that appears after nextOne is clicked:
+
+  Reveal the nextTwo button by changing the .hidden property to make the nextTwo button appear.
+  Hide the nextOne button by changing the .hidden property to hide the nextOne button.
+
+  10.
+    Next, a click event firing on the nextOne must change the music notes that guide the piano student through the song.
+
+    Add the following changes to the nextOne event handler function so the musical notes change when the button is clicked.
+
+    Change the content of the element with an ID of letter-note-five to D.
+    Change the content of the element with an ID of letter-note-six to C.
+
+*/
+
+// Write anonymous event handler property and function for the first progress button
+nextOne.addEventListener('click', function() {
+  
+  // .hidden property is a direct property of an HTML element and is not part of the style object
+  nextTwo.hidden = false;
+  nextOne.hidden = true;
+
+   // Changing the musical notes
+  document.getElementsById('letter-note-five').innerHTML= 'D';
+  document.getElementsById('letter-note-six').innerHTML= 'C';
+});
+
+/*
+11.
+  Create another event handler property with a click event on the button element called nextTwo. Then assign the property to the value of an anonymous event handler function.
+
+12.
+  Make the following changes to the button that appears when nextTwo is clicked:
+
+  Reveal the nextThree button by changing the .hidden property to make the nextThree button appear.
+  Hide the nextTwo button by changing the .hidden property to hide the nextTwo button.
+
+13.
+  Once the student has reached this point of the Happy Birthday song the lyrics changes from HAP-PY BIRTH-DAY TO YOU to HAP-PY BIRTH-DAY DEAR FRI-END.
+
+  Make the following changes to the lyrics in the function when the button is clicked:
+
+  Change the content of the element with an ID of word-five to DEAR.
+  Change the content of the element with an ID of word-six to FRI-.
+
+14.
+  Now you have the lyrics HAP-PY BIRTH-DAY DEAR FRI-. To finish the line, you must add the -END to the song box under the piano.
+
+  The -END element is stored in the lastLyric variable.
+
+  Add a statement to the event handler function for nextTwo that changes the display property of lastLyric to 'inline-block'.
+
+15.
+  A click event firing on the second button must also change the music notes to guide the piano student through the song.
+
+  Add the following changes to the nextTwo event handler function so the musical notes change when the button is clicked:
+
+  Change the content of the element with an ID of letter-note-three to G.
+  Change the content of the element with an ID of letter-note-four to E.
+  Change the content of the element with an ID of letter-note-five to C.
+  Change the content of the element with an ID of letter-note-six to B.
+
+*/
 
 // Write anonymous event handler property and function for the second progress button
+nextTwo.addEventListener('click', function() {
+  nextThree.hidden = false;
+  nextTwo.hidden = true;
 
+   // Changing the lyrics
+  document.getElementsById('word-five').innerHTML= 'DEAR';
+  document.getElementsById('word-six').innerHTML= 'FRI-';
+
+   // Display the '-END' lyric
+lastLyric.style.display = 'inline-block';
+
+//Changing Musical Notes
+
+document.getElementsById('letter-note-three').innerHTML = 'G';
+document.getElementsById('letter-note-four').innerHTML = 'E';
+document.getElementsById('letter-note-five').innerHTML = 'C';
+document.getElementsById('letter-note-six').innerHTML = 'B';
+
+});
 
 // Write anonymous event handler property and function for the third progress button
+nextThree.addEventListener('click', function() {
+  startOver.hidden = false;
+  nextThree.hidden = true;
 
+   // Changing the lyrics
+  document.getElementsById('word-one').innerHTML= 'HAP-';
+  document.getElementsById('word-two').innerHTML= 'PY';
+  document.getElementsById('word-three').innerHTML= 'BIRTH';
+  document.getElementsById('word-four').innerHTML= 'DAY';
+  document.getElementsById('word-five').innerHTML= 'TO';
+  document.getElementsById('word-six').innerHTML= 'YOU!';
+
+//Changing Musical Notes
+
+document.getElementsById('letter-note-one').innerHTML = 'F';
+document.getElementsById('letter-note-two').innerHTML = 'F';
+document.getElementsById('letter-note-three').innerHTML = 'E';
+document.getElementsById('letter-note-four').innerHTML = 'C';
+document.getElementsById('letter-note-five').innerHTML = 'D';
+document.getElementsById('letter-note-six').innerHTML = 'C';
+
+   // Hide the '-END' lyric
+lastLyric.style.display = 'none';
+});
 
 // This is the event handler property and function for the startOver button
 startOver.onclick = function() {
-  nextOne.hidden = false;
-  startOver.hidden = true;
-   document.getElementById('word-one').innerHTML = 'HAP-';
-  document.getElementById('letter-note-one').innerHTML = 'G';
-  document.getElementById('word-two').innerHTML = 'PY';
-  document.getElementById('letter-note-two').innerHTML = 'G';
-  document.getElementById('word-three').innerHTML = 'BIRTH-';
-  document.getElementById('letter-note-three').innerHTML = 'A';
-  document.getElementById('word-four').innerHTML = 'DAY';
-  document.getElementById('letter-note-four').innerHTML = 'G';
-  document.getElementById('word-five').innerHTML = 'TO';
-  document.getElementById('letter-note-five').innerHTML = 'C';
-  document.getElementById('word-six').innerHTML = 'YOU!';
-  document.getElementById('letter-note-six').innerHTML = 'B';
+nextOne.hidden = false;
+startOver.hidden = true;
+ document.getElementById('word-one').innerHTML = 'HAP-';
+document.getElementById('letter-note-one').innerHTML = 'G';
+document.getElementById('word-two').innerHTML = 'PY';
+document.getElementById('letter-note-two').innerHTML = 'G';
+document.getElementById('word-three').innerHTML = 'BIRTH-';
+document.getElementById('letter-note-three').innerHTML = 'A';
+document.getElementById('word-four').innerHTML = 'DAY';
+document.getElementById('letter-note-four').innerHTML = 'G';
+document.getElementById('word-five').innerHTML = 'TO';
+document.getElementById('letter-note-five').innerHTML = 'C';
+document.getElementById('word-six').innerHTML = 'YOU!';
+document.getElementById('letter-note-six').innerHTML = 'B';
 }

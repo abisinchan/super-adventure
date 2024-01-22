@@ -92,7 +92,7 @@ nextThree.addEventListener('click', function() {
 
 document.getElementsById('letter-note-one').innerHTML = 'F';
 document.getElementsById('letter-note-two').innerHTML = 'F';
-document.getElementsById('letter-note-three').innerHTML = 'E;
+document.getElementsById('letter-note-three').innerHTML = 'E';
 document.getElementsById('letter-note-four').innerHTML = 'C';
 document.getElementsById('letter-note-five').innerHTML = 'D';
 document.getElementsById('letter-note-six').innerHTML = 'C';
