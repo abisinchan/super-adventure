@@ -2,7 +2,7 @@
 Piano Keys
 
 ## Description
-This project is from Codecademy and helps developers practice DOM Events with JavaScript. 
+This project is from Codecademy and helps developers practice DOM Events with JavaScript by creating a piano player. In this project, I have  unsolved, solved, and solved with explanation files to anyone attempting to recreate this project.
 
 User Story:
 You’re a web developer who has been hired by a music education company. This client wants you to create an interactive game to help their beginner-level piano students study. Create a piano player with DOM events in JavaScript!
@@ -167,14 +167,9 @@ Congrats, you’ve completed the Piano Player! Play around with the piano and th
 N/A, only thing you will need is a code editor, to practice with this code.
 
 ## Usage
+When you use your mouse to press on a key, an event occurs and turns the background color blue. When  you release the mouse, the background color returns to normal.  Also in the box, is a lyric and note guide to the user practicing the song, and when user presses on the button with "Line" it changes to the next lyrics and notes of the song.
 
-Provide instructions and examples for use. Include screenshots as needed.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
 
 ## Credits
 Codecademy
