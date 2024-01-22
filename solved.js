@@ -49,8 +49,8 @@ nextOne.addEventListener('click', function() {
     nextOne.hidden = true;
 
      // Changing the musical notes
-    document.getElementsById('letter-note-five').innerHTML= 'D';
-    document.getElementsById('letter-note-six').innerHTML= 'C';
+    document.getElementById('letter-note-five').innerHTML= 'D';
+    document.getElementById('letter-note-six').innerHTML= 'C';
 });
 
 
@@ -60,18 +60,18 @@ nextTwo.addEventListener('click', function() {
     nextTwo.hidden = true;
 
      // Changing the lyrics
-    document.getElementsById('word-five').innerHTML= 'DEAR';
-    document.getElementsById('word-six').innerHTML= 'FRI-';
+    document.getElementById('word-five').innerHTML= 'DEAR';
+    document.getElementById('word-six').innerHTML= 'FRI-';
 
      // Display the '-END' lyric
 lastLyric.style.display = 'inline-block';
 
 //Changing Musical Notes
 
-document.getElementsById('letter-note-three').innerHTML = 'G';
-document.getElementsById('letter-note-four').innerHTML = 'E';
-document.getElementsById('letter-note-five').innerHTML = 'C';
-document.getElementsById('letter-note-six').innerHTML = 'B';
+document.getElementById('letter-note-three').innerHTML = 'G';
+document.getElementById('letter-note-four').innerHTML = 'E';
+document.getElementById('letter-note-five').innerHTML = 'C';
+document.getElementById('letter-note-six').innerHTML = 'B';
 
 });
 
@@ -81,21 +81,21 @@ nextThree.addEventListener('click', function() {
     nextThree.hidden = true;
 
      // Changing the lyrics
-    document.getElementsById('word-one').innerHTML= 'HAP-';
-    document.getElementsById('word-two').innerHTML= 'PY';
-    document.getElementsById('word-three').innerHTML= 'BIRTH';
-    document.getElementsById('word-four').innerHTML= 'DAY';
-    document.getElementsById('word-five').innerHTML= 'TO';
-    document.getElementsById('word-six').innerHTML= 'YOU!';
+    document.getElementById('word-one').innerHTML= 'HAP-';
+    document.getElementById('word-two').innerHTML= 'PY';
+    document.getElementById('word-three').innerHTML= 'BIRTH';
+    document.getElementById('word-four').innerHTML= 'DAY';
+    document.getElementById('word-five').innerHTML= 'TO';
+    document.getElementById('word-six').innerHTML= 'YOU!';
 
 //Changing Musical Notes
 
-document.getElementsById('letter-note-one').innerHTML = 'F';
-document.getElementsById('letter-note-two').innerHTML = 'F';
-document.getElementsById('letter-note-three').innerHTML = 'E';
-document.getElementsById('letter-note-four').innerHTML = 'C';
-document.getElementsById('letter-note-five').innerHTML = 'D';
-document.getElementsById('letter-note-six').innerHTML = 'C';
+document.getElementById('letter-note-one').innerHTML = 'F';
+document.getElementById('letter-note-two').innerHTML = 'F';
+document.getElementById('letter-note-three').innerHTML = 'E';
+document.getElementById('letter-note-four').innerHTML = 'C';
+document.getElementById('letter-note-five').innerHTML = 'D';
+document.getElementById('letter-note-six').innerHTML = 'C';
 
      // Hide the '-END' lyric
 lastLyric.style.display = 'none';

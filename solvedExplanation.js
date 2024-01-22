@@ -180,8 +180,8 @@ nextOne.addEventListener('click', function() {
   nextOne.hidden = true;
 
    // Changing the musical notes
-  document.getElementsById('letter-note-five').innerHTML= 'D';
-  document.getElementsById('letter-note-six').innerHTML= 'C';
+  document.getElementById('letter-note-five').innerHTML= 'D';
+  document.getElementById('letter-note-six').innerHTML= 'C';
 });
 
 /*
@@ -227,46 +227,85 @@ nextTwo.addEventListener('click', function() {
   nextTwo.hidden = true;
 
    // Changing the lyrics
-  document.getElementsById('word-five').innerHTML= 'DEAR';
-  document.getElementsById('word-six').innerHTML= 'FRI-';
+  document.getElementById('word-five').innerHTML= 'DEAR';
+  document.getElementById('word-six').innerHTML= 'FRI-';
 
    // Display the '-END' lyric
 lastLyric.style.display = 'inline-block';
 
 //Changing Musical Notes
 
-document.getElementsById('letter-note-three').innerHTML = 'G';
-document.getElementsById('letter-note-four').innerHTML = 'E';
-document.getElementsById('letter-note-five').innerHTML = 'C';
-document.getElementsById('letter-note-six').innerHTML = 'B';
+document.getElementById('letter-note-three').innerHTML = 'G';
+document.getElementById('letter-note-four').innerHTML = 'E';
+document.getElementById('letter-note-five').innerHTML = 'C';
+document.getElementById('letter-note-six').innerHTML = 'B';
 
 });
 
+/*
+16.
+  Create an event handler property with a click event on the nextThree element.
+
+17.
+  Using an anonymous event handler function, make the following changes to the button that appears when nextThree is clicked:
+
+  Reveal the startOver button by changing the .hidden property to make the startOver button appear.
+  Hide the nextThree button by changing the .hidden property to hide the nextThree button.
+
+18.
+  Add the following changes to the nextThree event handler function so the lyrics change when this button is clicked.
+
+  Change the content of the element with an ID of word-one to HAP-.
+  Change the content of the element with an ID of word-two to PY.
+  Change the content of the element with an ID of word-three to BIRTH.
+  Change the content of the element with an ID of word-four to DAY
+  Change the content of the element with an ID of word-five to TO.
+  Change the content of the element with an ID of word-six to YOU!.
+19.
+Add the following changes to the nextThree event handler function so the musical notes change when the button is clicked.
+
+Change the content of the element with an ID of letter-note-one to F.
+Change the content of the element with an ID of letter-note-two to F.
+Change the content of the element with an ID of letter-note-three to E.
+Change the content of the element with an ID of letter-note-four to C.
+Change the content of the element with an ID of letter-note-five to D.
+Change the content of the element with an ID of letter-note-six to C.
+
+20.
+Now you have the lyricsHAP-PY BIRTH-DAY TO YOU! -END — that couldn’t be right! To finish the line you must get rid of the “-end” in the song box.
+
+Add a statement to the event handler function for nextThree that changes the display property of lastLyric back to 'none'.
+
+*/
 // Write anonymous event handler property and function for the third progress button
 nextThree.addEventListener('click', function() {
   startOver.hidden = false;
   nextThree.hidden = true;
 
    // Changing the lyrics
-  document.getElementsById('word-one').innerHTML= 'HAP-';
-  document.getElementsById('word-two').innerHTML= 'PY';
-  document.getElementsById('word-three').innerHTML= 'BIRTH';
-  document.getElementsById('word-four').innerHTML= 'DAY';
-  document.getElementsById('word-five').innerHTML= 'TO';
-  document.getElementsById('word-six').innerHTML= 'YOU!';
+  document.getElementById('word-one').innerHTML= 'HAP-';
+  document.getElementById('word-two').innerHTML= 'PY';
+  document.getElementById('word-three').innerHTML= 'BIRTH';
+  document.getElementById('word-four').innerHTML= 'DAY';
+  document.getElementById('word-five').innerHTML= 'TO';
+  document.getElementById('word-six').innerHTML= 'YOU!';
 
 //Changing Musical Notes
 
-document.getElementsById('letter-note-one').innerHTML = 'F';
-document.getElementsById('letter-note-two').innerHTML = 'F';
-document.getElementsById('letter-note-three').innerHTML = 'E';
-document.getElementsById('letter-note-four').innerHTML = 'C';
-document.getElementsById('letter-note-five').innerHTML = 'D';
-document.getElementsById('letter-note-six').innerHTML = 'C';
+document.getElementById('letter-note-one').innerHTML = 'F';
+document.getElementById('letter-note-two').innerHTML = 'F';
+document.getElementById('letter-note-three').innerHTML = 'E';
+document.getElementById('letter-note-four').innerHTML = 'C';
+document.getElementById('letter-note-five').innerHTML = 'D';
+document.getElementById('letter-note-six').innerHTML = 'C';
 
    // Hide the '-END' lyric
 lastLyric.style.display = 'none';
 });
+
+/*
+Congrats, you’ve completed the Piano Player! Play around with the piano and the song box to fire all the events.
+*/
 
 // This is the event handler property and function for the startOver button
 startOver.onclick = function() {
